@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- (1)console object method -->
+      -> assert()
+      ->clear()
+      ->log()
+      ->table()
+      ->warn()
+      ->error()
+      ->info()
+      
+       <!-- ways to print javascript -->
+    // console.log("hello world")
+    // document.write("this document is to write")
+
+    <!-- // (2)javascript console API :- -->
+    // console.log("");
+    // console.warn("");
+    // console.error("");
+
+    <!-- // (3)javascript variables :- -->
+      container to store data values
+
+    //      var number1 =34;
+    //      var number2=56;
+    //      console.log(number1+number2);
+
+
+    <!-- // (4)data types in javascript :- -->
+    //      1.numbers
+    //     2.strings
+    //     3.objects
+
+    // *)primititve data types ->undefined ,null,number,string,boolean,symbol
+    // *)refrence data types -> arrays and objects
+
+
+    <!-- // (5)operators in JS :- -->
+
+    //    1)arithmetic 
+    //    2)assignment
+    //    3)logical -> logical or / logical Not
+
+
+    <!-- //  (6)functions in JS :- -->
+
+    //  DRY : DO NOT REPEAT YOURSELF
+
+    <!-- //  (6) conditionals IN JS :- -->
+
+    <!-- //    EX) ---- IF-ELSE -->
+    var age = 11;
+    if (age > 18) {
+        console.log('you can drink');
+    }
+    else {
+        console.log('you can not drink')
+    }
+
+    <!-- // ex)---- IF-ELSE IF LADDER  -->
+
+    if (age > 32) {
+        console.log('you are not a kid');
+    }
+    else if (age > 26) {
+        colsole.log('yes');
+    }
+
+
+    <!-- // *) ARRAY -->
+    var err = [1, 2, 3, 4, 5, 6, 7]
+    console.log(arr);
+    for (var i = 0; i < arr.length; i++) {
+        console.length(arr[i])
+    }
+
+    <!-- // *)FOREACH -->
+
+    //   arr.foreach(function(element)){
+    //     console.log(element);}
+    //   
+
+
+    <!-- //    *) WHILE LOOP  -->
+    var arr = [1, 2, 3, 4, 5, 6, 7]
+    let j = 0;
+    while (j < rr.length) {
+        console.log(arr[j]);
+        j++
+    }
+
+    <!-- // *) DO WHILE LOOP -->
+
+    do {
+        console.log(arr[j])
+        j++;
+
+
+    }
+    while (j < arr.length);
+
+
+                           <!-- // (7) ARRAY METHODS  -->
+
+    let myarr = ["sonal", "shivani", 34, null, true]
+    console.log(myarr.length);
+
+    //    myArr.pop();  --> deleted last one element...pop returns the poped element
+    //    myArr.push("harry") --> add one element
+    //    mysrr.shift() -->removed first element and returnd it
+
+                        --> let r =num.shift()
+                        console.log(r, num)
+
+    //myArr.unshift() --> Adds the element  to the begning ..returns the new array length
+                    -->  let r =num.unshift(78)
+                        console.log(r, num)
+                  
+    //delete()-->   array element can be deleted using the delete operator  
+
+    //concat()--> to join one or more elements together
+
+    //sort()-->it is used to sort an array alphabatically
+           
+                --> let num=[1,4,5,2,3]
+                   num.sort()
+                   console.log(num)
+    //reverce()-->reverce the element in source array
+    //splice()-->add new items in array
+    //slice()-->slice out the pease from  an array ..it creates a new array
+
+
+    //   console.log(newLen); --> print new array length
+    // let a = num.toString()-->convert into string
+    // join()-->joins all the array elements using a seprater
+        ex-- > let a = [7,8,9]
+                a.join("_")
+                7_8_9
+
+                            <!-- find() -->
+
+                The find() method returns the value of the first element that passes a test.
+
+                The find() method executes a function for each array element.
+                
+                The find() method returns undefined if no elements are found.
+                
+                The find() method does not execute the function for empty elements.
+                
+                The find() method does not change the original array.
+
+
+ <!-- const ages = [3, 10, 18, 20];
+
+function checkAge(age) {
+  return age > 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.find(checkAge);
+} -->
+
+                        <!-- findIndex() -->
+
+The findIndex() method executes a function for each array element.
+
+The findIndex() method returns the index (position) of the first element that passes a test.
+
+The findIndex() method returns -1 if no match is found.
+
+The findIndex() method does not execute the function for empty array elements.
+
+The findIndex() method does not change the original array.
+<!-- -->ex -->
+const ages = [3, 10, 18, 20];
+
+ages.findIndex(checkAge);
+
+function checkAge(age) {
+  return age > 18;
+}
+
+                           <!-- flatmap() -->
+
+The flatMap() method maps all array elements and creates a new flat array.
+
+flatMap() creates a new array from calling a function for every array element.
+
+flatMap() does not execute the function for empty elements.
+
+flatMap() does not change the original array.
+
+<!-- ex -->
+const myArr = [1, 2, 3, 4, 5, 6];
+const newArr = myArr.flatMap((x) => x * 2);
+    
+
+                          <!-- // Array.from -->
+            --> used to create an array from any other object 
+        --> let name ="sonal"
+        let arr=array.from(name)
+        console.log(arr)
+
+
+<!-- //for ....of -->  get the values from an array
+ 
+    --> for(let i of num){
+        console.log(i)
+    }
+
+    <!-- //for..in -->
+        
+    for(let i in num){
+        console.log(i)
+    }
+                      <!-- flat array method -->
+    const arr1 = [0, 1, 2, [3, 4]];
+
+console.log(arr1.flat());
+// Expected output: Array [0, 1, 2, 3, 4]
+
+const arr2 = [0, 1, 2, [[[3, 4]]]];
+
+console.log(arr2.flat(2));
+// Expected output: Array [0, 1, 2, Array [3, 4]]
+
+                  <!-- // (8) STRING methods in JS -->
+
+    let myString = "sonal";
+    console.log(myString.length)
+
+                 <!-- *) Array.toString(); -->
+   ---> const array1 = [1, 2, 'a', '1a'];
+
+console.log(array1.toString());
+// Expected output: "1,2,a,1a"
+
+<!-- String length -->
+-->let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let length = text.length;
+
+
+<!-- String slice() -->
+let text = "Apple, Banana, Kiwi";
+let part = text.slice(7, 13);
+
+
+<!-- String substring() -->
+let str = "Apple, Banana, Kiwi";
+let part = str.substring(7, 13);
+
+<!-- String substr() -->
+let str = "Apple, Banana, Kiwi";
+let part = str.substr(7, 6);
+
+<!-- String replace() -->
+let text = "Please visit Microsoft!";
+let newText = text.replace("Microsoft", "W3Schools");
+
+<!-- String replaceAll() -->
+text = text.replaceAll("Cats","Dogs");
+text = text.replaceAll("cats","dogs");
+    
+
+
+    <!-- // *) DISPLAY DATE :- -->
+
+    let myDate = new Date();
+    console.log(myDate);
+
+    <!-- // *) GET TIME -> TIME  SHOWS IN SECONDS -->
+
+    let myDate = new Date();
+    console.log(myDate.getTime());
+
+    <!-- // *) GET FULL YEAR -->
+
+    let myDate = new Date();
+    console.log(myDate.getFullYear());
+
+
+    <!-- // *) GET DAY -->
+    let myDate = new Date();
+    console.log(myDate.getDay());
+
+     <!-- *) GET MINUTES -->
+    let myDate = new Date();
+    console.log(myDate.getMinutes());
+
+    <!-- ***) DOM MANIPULATON  METHODS -->
+
+    // (1)document.getElementById('click');
+    // (2)removeChild(element); --> removes an element
+
+
+    <!-- **)SELECTOR USING QUERY   -->
+
+    sel = document.querySelector('.container') //only return one element
+    console.log(sel)
+
+    sel = document.querySelectorAll('.container')   // shows all element
+    console.log(sel)
+
+
+    function clicked() {
+        console.log('the button was clicked')
+    }
+    document.onload = function () {
+        console.log('the document was loaded')
+
+    }
+    <!-- **) EVENTS IN JS -->
+
+    firstContainer.addEventListener('click', function () {
+        console.log("click huaa")
+    })
+
+    firstContainer.addEventListener('mouseover', function () {
+        console.log("mouse on container")
+
+        firstContainer.addEventListener('mouseout', function () {
+            console.log("mouse out of container");
+
+            firstContainer.addEventListener('mouseup', function () {
+                console.log("mouse up when clicked on container");
+
+                firstContainer.addEventListener('mousedown', function () {
+                    console.log("mouse down when clicked on container");
+
+   <!-- *)ARROW FUNCTION [=>] -->
+
+                    function summ(a, b)  // 1. trick
+                    {
+                        return a + b;
+                    }
+
+                    summ = (a, b) => {  // 2. trick
+                        return a + b;
+                    }
+
+<!-- // *) SETTIMEOUT AND SETINTERVAL FUNCTONS -->
+logkaro=()=>{
+    console.log("i am your log")
+}
+            
+                  setTimeout(logkaro,2000);
+                  setInterval(logkaro.2000);
+    
+    // clr = setinterval (logkaro,2000);
+    // use clearinetrval/clear timeout (clr) to cancle setinterval/settimeout
+
+    <!-- // *)JAVASCRIPT LOCALSTORAGE --> use in as a string save in data uesers computer  
+    <!-- -------------------------------------------------------------------------------------- -->
+            
+      <!-- --------------------   JSON  ----------------------- -->
+    
+    
+    //         :- JAVASCRIPT OBJECT NOTATION 
+    //         :- open standard file-format
+    //         :- use in exchange the data
+
+
+    <!-- // EX) -->
+          obj = {name:sonal ,length:1, a:{this:'tha\"t'}}
+          jso =JSON .stringify(obj);
+          console.log(typeof jso)
+          console.log(jso)
+
+
+          parsed= JSON.parse(name:sonal ,length:1, a:{this:'tha\"t')
+          console.log(parsed);
+
+          <!-- ->DOM-> document object model -->
+               ->ek html page javascriptpage ko object bna ke usko document naam de diya hai
+               -> dom represent the page contant as html--
+               document.body -> page body as js object--
+               document.body.style.background="green"->changes page background to green
+
+
+               <!-- searching the dom -->
+
+-->  dom navigation proparties are helpful when the elements are close to each other
+
+<!-- document.getElementById-->
+ = this method is used to get the element with a given "id" attribute
+ 
+ ex)let sum =document.getElementBtId("span")
+ span.style.color="red"
+
+ <!-- document.queryselectorAll() -->
+ =returns all element inside an element matching the given css structure    
+
+
+<!-- BOM -.BROWSER OBJECT model  -->
+      uses in to make javascript object--
+-->text node
+-->   element node
+-->   comment node
+</body>
+</html>

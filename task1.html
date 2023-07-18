@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const parentArray = [[
+   {
+      key: 123,
+      value: 'India'
+   }, {
+      key: 124,
+      value: 'USA'
+   }, {
+      key: 125,
+      value: 'Japan'
+   }, {
+      key: 126,
+      value: 'Denmark'
+   }, {
+         key: 127,
+      value: 'Austria'
+   },
+], [
+   {
+      key: 124,
+      value: 'Kenya'
+   }, {
+      key: 126,
+      value: 'UK'
+   }, {
+      key: 123,
+      value: 'Germany'
+   }, {
+      key: 127,
+      value: 'Spain'
+   }, {
+      key: 125,
+      value: 'Portugal'
+   },
+]];
+const result = {};
+
+// Iterate over each nested array
+parentArray.forEach((nestedArray) => {
+  // Iterate over each object in the nested array
+  nestedArray.forEach((obj) => {
+    const { key, value } = obj;
+    if (result[key]) {
+      result[key].push(value);
+    } else {
+      result[key] = [value];
+    }
+  });
+});
+
+console.log(result);
+</script>
+    
+</body>
+</html>
